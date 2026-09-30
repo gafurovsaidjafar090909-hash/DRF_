@@ -1,0 +1,12 @@
+export type Role = 'director' | 'teacher'
+export type User = { id: number; username: string; role: Role; teacher_id: number | null }
+export type Subject = { id: number; name: string; is_active: boolean }
+export type SchoolClass = { id: number; grade: number; section: string; label: string; is_active: boolean }
+export type Teacher = { id: number; first_name: string; last_name: string; subject_ids: number[]; max_weekly_hours: number; is_active: boolean; account_username: string; assigned_hours: number; remaining_hours: number }
+export type Requirement = { id: number; school_class: number; class_label: string; subject: number; subject_name: string; hours: number }
+export type Unavailable = { id: number; teacher: number; teacher_name: string; day: number; period: number }
+export type SchoolSettings = { days: number[]; periods_per_day: number; updated_at: string }
+export type Lesson = { id: number; school_class: number; class_label: string; subject: number; subject_name: string; teacher: number; teacher_name: string; day: number; period: number }
+export type Diagnostic = { code: string; params: Record<string, string | number> }
+export type Generation = { id: number; status: 'pending' | 'completed' | 'infeasible' | 'timeout' | 'error'; is_active: boolean; created_at: string; diagnostics: Diagnostic[]; solver_status: string; duration_seconds: number; lesson_count: number; message?: string }
+export type Timetable = { generation: Generation | null; lessons: Lesson[] }

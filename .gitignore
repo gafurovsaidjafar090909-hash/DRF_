@@ -1,0 +1,14 @@
+node_modules/
+data/*.sqlite
+data/*.sqlite-*
+.env
+.venv/
+.runtime/
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+backend/**/__pycache__/
+backend/*.sqlite3
+numpy-*.whl
+numpy-*.json
+
