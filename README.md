@@ -79,3 +79,4 @@ npm.cmd run build
 ```
 
 The test settings use an in-memory SQLite database for fast isolated unit tests; the application itself uses PostgreSQL. With both development servers and seed data running, `node scripts\smoke.mjs` verifies HTTP login, the 72-lesson active timetable, the teacher view and API permissions against PostgreSQL.
+# DRF
