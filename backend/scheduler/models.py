@@ -12,8 +12,8 @@ class User(AbstractUser):
     role = models.CharField(
         max_length=12,
         choices=Role.choices,
-        default=Role.TEACHER,
-    )
+        default=Role.TEACHER,) 
+
 
 
 class Subject(models.Model):
